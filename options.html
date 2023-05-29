@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PoolTogether Extention Login</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+    body {
+      background-color: #f4effc;
+      color: #333333;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      max-width: 400px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .logo img {
+      width: 80px;
+      height: 80px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .skeleton-loader {
+      background-color: #e4e4e4;
+      border-radius: 4px;
+      height: 20px;
+      margin-bottom: 10px;
+    }
+
+    .skeleton-loader-small {
+      width: 80px;
+    }
+
+    .skeleton-loader-medium {
+      width: 150px;
+    }
+
+    .skeleton-loader-large {
+      width: 250px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    input[type="password"] {
+      padding: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+
+    button[type="submit"] {
+      padding: 12px 20px;
+      background-color: #6c63ff;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 400;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #4c49b2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="icon32.png" alt="Extension Icon">
+    </div>
+    <h1>PoolTogether Extention login</h1>
+    <form id="passwordForm">
+      <label for="newPasswordInput">New Password:</label>
+      <input type="password" id="newPasswordInput" required>
+      <label for="confirmPasswordInput">Confirm Password:</label>
+      <input type="password" id="confirmPasswordInput" required>
+      <button type="submit">Create Password</button>
+    </form>
+    <form id="loginForm" style="display: none;">
+      <label for="passwordInput">Password:</label>
+      <input type="password" id="passwordInput" required>
+      <button type="submit">Login</button>
+    </form>
+    <div id="loaderContainer" style="display: none;">
+      <div class="skeleton-loader skeleton-loader-small"></div>
+      <div class="skeleton-loader skeleton-loader-medium"></div>
+      <div class="skeleton-loader skeleton-loader-large"></div>
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
